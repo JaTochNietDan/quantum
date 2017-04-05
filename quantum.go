@@ -5,6 +5,7 @@ import (
 	"math/rand"
 	"regexp"
 	"strings"
+	"time"
 )
 
 var regexSpace = regexp.MustCompile(`([\.,;\?])`)
@@ -13,6 +14,10 @@ var regexRemoveSpaces = regexp.MustCompile(` ([,\.;\?])`)
 var regexPrefix = regexp.MustCompile(`- `)
 var regexAddSpace = regexp.MustCompile(`\?(\w)`)
 var regexAddSentencesSpace = regexp.MustCompile(`([\.\?])(\w)`)
+
+func init() {
+	rand.Seed(time.Now().UnixNano())
+}
 
 func Generate(numberOfSentences int) (fulltext string) {
 	sentencesCopy := make([][]string, len(sentences))
