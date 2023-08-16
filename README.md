@@ -1,5 +1,6 @@
 # Quantum Entanglement Generation Device
-A Go library which will generate quantum statements ported from [here](http://sebpearce.com/bullshit/)].
+A Go library which will generate quantum statements ported from [here](http://sebpearce.com/bullshit/).
+
 
 ## Example generation
 
